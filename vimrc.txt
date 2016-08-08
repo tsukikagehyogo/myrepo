@@ -1,0 +1,52 @@
+" set encoding=cp932
+" set encoding=utf8
+" set fileencodings=iso-2022-jp,iso-2022-jp-2,euc-jp,sjis
+"
+"#------------------------------
+"# for UTF8 cygwin1.dll
+"#------------------------------
+set encoding=utf-8
+"set fileencodings=iso-2022-jp,utf-8,euc-jp,cp932
+set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932
+let $LANG='ja'
+
+"#-------------------
+"# Takahashi Add
+"#-------------------
+" set nohlsearch
+autocmd FileType * set formatoptions-=ro
+set noai
+let loaded_matchparen = 1
+"
+set nowrap
+set tabstop=4
+set shiftwidth=4
+map  mx1Gi#!/usr/bin/perl -w#!c:\perl\bin\perl.exe#use strict;'x
+map  mx1Gi#!/usr/bin/ruby -Ku#!d:\Program Files\ruby-1.8\bin\ruby.exe'x
+map  :%!expand4
+"map  :.!href
+map  ywi<a href="lea">pi</a>
+" map  mx1Gi<HTML><HEAD><TITLE> </TITLE></HEAD><BODY>Go</BODY></HTML>'x
+map  mx1Gi<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><HTML LANG="ja-JP"><HEAD><meta http-equiv="Content-Type" content="text/html; charset=x-sjis"><META http-equiv="Content-Script-Type" content="text/javascript"> <TITLE> </TITLE></HEAD><BODY><SCRIPT LANGUAGE="JavaScript"></SCRIPT><script type="text/javascript"><!--// --></script> <pre><a href="#" onclick=''></a></pre></BODY></HTML>'x
+" set autoindent
+"-----------------------------------------------------------------
+" An example for a vimrc file.
+"
+" Maintainer:	Bram Moolenaar <Bram@vim.org>
+" Last change:	2001 Jul 18
+"
+" To use it, copy it to
+"     for Unix and OS/2:  ~/.vimrc
+"	      for Amiga:  s:.vimrc
+"  for MS-DOS and Win32:  $VIM\_vimrc
+"	    for OpenVMS:  sys$login:.vimrc
+"-----------------------------------------------------------------
+set history=50		" keep 50 lines of command line history
+" map! =a </a>F<bywi<a href="pa">
+map! `a ?\sly$i<a href="pa">$a</a>
+map `a ?\sly$i<a href="pa">$a</a>
+"
+" □とか○の文字があってもカーソル位置がずれないようにする
+if exists('&ambiwidth')
+  set ambiwidth=double
+endif
